@@ -50,3 +50,11 @@ vast is a build tool for shell script projects. vast is written in POSIX sh for 
 ```console
 $ make
 ```
+
+# SEE ALSO
+
+* Inspired by the excellent [mage](https://magefile.org/) build system for Go projects
+* [GNU make](https://www.gnu.org/software/make/), a classic task runner
+* [cmake](https://cmake.org/) for C/C++ projects
+* [tinyrick](https://github.com/mcandre/tinyrick) for Rust projects
+* [dale](https://github.com/mcandre/dale) offers similar task runner features for D projects
