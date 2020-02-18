@@ -1,0 +1,12 @@
+#!/bin/sh
+
+DIR="${0%/*}"
+
+# shellcheck source=/dev/null
+. "${DIR}/../lib/reverso.sh"
+
+echo "Running integration test suite."
+
+printf "pig\\nbear\\nman\\n" |
+    reverso |
+    diff "${DIR}/fixtures/monster.txt" -

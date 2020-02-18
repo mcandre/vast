@@ -1,0 +1,63 @@
+#!/bin/sh
+
+VAST_VERSION='0.0.1'
+VAST_FILE='vast.sh'
+VAST_D='.vast.d'
+
+PATH="${PATH}:${VAST_D}"
+
+vast_tasks=''
+vast_origin=''
+
+vast_usage() {
+    printf -- "Usage: %s [OPTION] [<task> [<task> [<task>...]]]\\n\\n" "$0"
+
+    printf -- "-l\\tList tasks\\n"
+    printf -- "-h\\tShow usage information\\n"
+    printf -- "-v\\tShow version information\\n"
+}
+
+vast_version() {
+    echo "$VAST_VERSION"
+}
+
+vast_load() {
+    if [ ! -r "$VAST_FILE" ]; then
+        echo "Error: No readable file $(pwd)/${VAST_FILE}"
+        exit 1
+    fi
+
+    # shellcheck source=/dev/null
+    . "$VAST_FILE"
+}
+
+vast_list() {
+    vast_load
+    echo "$vast_tasks"
+}
+
+case "$1" in
+-l)
+    vast_list
+    exit
+    ;;
+-h)
+    vast_usage
+    exit
+    ;;
+-v)
+    vast_version
+    exit
+    ;;
+esac
+
+vast_load
+TASKS="$vast_origin"
+
+if [ "$#" -gt 0 ]; then
+    TASKS="$*"
+fi
+
+for task in $TASKS; do
+    "$task"
+done
