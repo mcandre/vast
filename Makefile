@@ -17,7 +17,10 @@ checkbashisms:
 shellcheck:
 	stank . | xargs shellcheck
 
-lint: shfmt bashate shlint checkbashisms shellcheck
+slick:
+	stank -sh . | xargs slick -n
+
+lint: shfmt bashate shlint checkbashisms shellcheck slick
 
 test-version:
 	vast -v

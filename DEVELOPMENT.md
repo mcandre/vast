@@ -7,6 +7,7 @@
 * [checkbashisms](https://sourceforge.net/projects/checkbaskisms/)
 * [ShellCheck](https://hackage.haskell.org/package/ShellCheck)
 * [stank](https://github.com/mcandre/stank) (e.g. `go get github.com/mcandre/stank/...`)
+* [slick](https://github.com/mcandre/slick) (e.g. `go get github.com/mcandre/slick/....`)
 
 # BUILD: LINT + TEST
 
