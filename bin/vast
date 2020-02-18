@@ -33,7 +33,10 @@ vast_load() {
 
 vast_list() {
     vast_load
-    echo "$vast_tasks"
+
+    for task in $vast_tasks; do
+        echo "$task"
+    done
 }
 
 case "$1" in

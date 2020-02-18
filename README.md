@@ -13,7 +13,8 @@ export vast_tasks='build itest'
 export vast_origin='build'
 
 $ vast -l
-build itest
+build
+itest
 
 $ vast
 Running integration test suite.
