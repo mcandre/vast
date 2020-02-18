@@ -1,7 +1,5 @@
 # vast: shell builds manifest.
 
-![Vishvakarma the all-architect](https://raw.githubusercontent.com/mcandre/vast/master/vast.jpg)
-
 # EXAMPLE
 
 ```console
@@ -23,6 +21,8 @@ Running integration test suite.
 See `vast -h` for more detail.
 
 # ABOUT
+
+![Vishvakarma the all-architect](https://raw.githubusercontent.com/mcandre/vast/master/vast.jpg)
 
 vast is a build tool for shell script projects. vast is written in POSIX sh for portability, though you may use it with any POSIXy shell, including derivatives such as bash, zsh, and ksh. If you're familiar with `make` and `Makefile`, then you may enjoy `vast` and `vast.sh` files. By convention, individual tasks are defined as executables in `.vast.d/`
 
