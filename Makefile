@@ -17,10 +17,13 @@ checkbashisms:
 shellcheck:
 	stank . | xargs shellcheck
 
+funk:
+	funk .
+
 slick:
 	stank -sh . | xargs slick -n
 
-lint: shfmt bashate shlint checkbashisms shellcheck slick
+lint: shfmt bashate shlint checkbashisms shellcheck funk slick
 
 test-version:
 	vast -v
