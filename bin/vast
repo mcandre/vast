@@ -1,8 +1,8 @@
 #!/bin/sh
 
 VAST_VERSION='0.0.1'
-VAST_FILE='vast.sh'
-VAST_D='.vast.d'
+VAST_FILE='./vast.sh'
+VAST_D='./.vast.d'
 
 PATH="${PATH}:${VAST_D}"
 
