@@ -1,4 +1,7 @@
 #!/bin/sh
+set -eu
+IFS="$(printf '%b_' '\n\t ')"
+IFS="${IFS%_}"
 
 VAST_VERSION='0.0.1'
 VAST_FILE='./vast.sh'
