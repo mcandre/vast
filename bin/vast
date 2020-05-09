@@ -42,20 +42,22 @@ vast_list() {
     done
 }
 
-case "$1" in
--l)
-    vast_list
-    exit
-    ;;
--h)
-    vast_usage
-    exit
-    ;;
--v)
-    vast_version
-    exit
-    ;;
-esac
+if [ "$#" -gt 0 ]; then
+    case "$1" in
+    -l)
+        vast_list
+        exit
+        ;;
+    -h)
+        vast_usage
+        exit
+        ;;
+    -v)
+        vast_version
+        exit
+        ;;
+    esac
+fi
 
 vast_load
 TASKS="$vast_origin"
