@@ -8,9 +8,6 @@ shfmt:
 bashate:
 	stank . | xargs bashate
 
-shlint:
-	stank . | xargs shlint
-
 checkbashisms:
 	stank . | xargs checkbashisms -n -p
 
@@ -20,10 +17,7 @@ shellcheck:
 funk:
 	funk .
 
-slick:
-	stank -sh . | xargs slick -n
-
-lint: shfmt bashate shlint checkbashisms shellcheck funk slick
+lint: shfmt bashate checkbashisms shellcheck funk
 
 test-version:
 	vast -v
