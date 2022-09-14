@@ -8,16 +8,13 @@ shfmt:
 bashate:
 	stank . | xargs bashate
 
-checkbashisms:
-	stank . | xargs checkbashisms -n -p
-
 shellcheck:
 	stank -exInterp zsh . | grep -v node_modules | xargs shellcheck
 
 funk:
 	funk .
 
-lint: shfmt bashate checkbashisms shellcheck funk
+lint: shfmt bashate shellcheck funk
 
 test-version:
 	vast -v
