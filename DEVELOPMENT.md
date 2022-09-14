@@ -6,6 +6,10 @@
 * [checkbashisms](https://sourceforge.net/projects/checkbaskisms/)
 * [ShellCheck](https://hackage.haskell.org/package/ShellCheck)
 
+## Recommended
+
+* [ASDF](https://asdf-vm.com/) 0.10
+
 # BUILD: LINT + TEST
 
 ```console
