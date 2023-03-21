@@ -4,6 +4,7 @@
 * [make](https://www.gnu.org/software/make/)
 * [bashate](https://pypi.python.org/pypi/bashate/0.5.1)
 * [checkmake](https://github.com/mrtazz/checkmake)
+* [GNU findutils](https://www.gnu.org/software/findutils/)
 * [ShellCheck](https://hackage.haskell.org/package/ShellCheck)
 
 ## Recommended
