@@ -1,3 +1,5 @@
+.PHONY: all build lint test clean
+
 all: build
 
 build: lint test
@@ -14,7 +16,10 @@ shellcheck:
 funk:
 	funk .
 
-lint: shfmt bashate shellcheck funk
+checkmake:
+	checkmake Makefile
+
+lint: shfmt bashate shellcheck funk checkmake
 
 test-version:
 	vast -v

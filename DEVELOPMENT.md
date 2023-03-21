@@ -3,6 +3,7 @@
 * [accio](https://github.com/mcandre/accio)
 * [make](https://www.gnu.org/software/make/)
 * [bashate](https://pypi.python.org/pypi/bashate/0.5.1)
+* [checkmake](https://github.com/mrtazz/checkmake)
 * [ShellCheck](https://hackage.haskell.org/package/ShellCheck)
 
 ## Recommended
