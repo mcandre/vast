@@ -1,4 +1,4 @@
-# vast: shell builds manifest.
+# vast: a build tool for shell scripts
 
 # EXAMPLE
 
