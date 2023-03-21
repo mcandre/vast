@@ -17,7 +17,11 @@ funk:
 	funk .
 
 checkmake:
-	checkmake Makefile
+	find . \
+		-type f \
+		\( -iname '*makefile*' -o -iname '*.mk' -o -iname '*.make' \) \
+		-print0 | \
+		xargs -0 -n 1 checkmake
 
 lint: shfmt bashate shellcheck funk checkmake
 
