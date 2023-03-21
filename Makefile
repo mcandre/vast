@@ -1,8 +1,13 @@
-.PHONY: all build lint test clean
+.PHONY: all audit build lint test clean
 
 all: build
 
 build: lint test
+
+safety:
+	@safety check
+
+audit: safety
 
 shfmt:
 	stank . | xargs shfmt -w -i 4
@@ -16,6 +21,9 @@ shellcheck:
 funk:
 	funk .
 
+yamllint:
+	yamllint .
+
 checkmake:
 	@find . \
 		-type f \
@@ -28,7 +36,7 @@ checkmake:
 		-print0 | \
 		xargs -0 -n 1 checkmake
 
-lint: shfmt bashate shellcheck funk checkmake
+lint: shfmt bashate shellcheck funk yamllint checkmake
 
 test-version:
 	vast -v
