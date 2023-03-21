@@ -17,7 +17,7 @@ funk:
 	funk .
 
 checkmake:
-	find . \
+	@find . \
 		-type f \
 		\( -iname '*makefile*' -o -iname '*.mk' -o -iname '*.make' \) \
 		-print0 | \
