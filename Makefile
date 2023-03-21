@@ -31,3 +31,6 @@ integration-test:
 	sh -c "cd example && vast -l && vast && vast build"
 
 test: test-version test-usage integration-test
+
+clean:
+	@echo "nothing to do"
