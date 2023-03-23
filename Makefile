@@ -12,16 +12,16 @@ audit: safety
 shfmt:
 	@stank -exInterp zsh . | \
 		grep -v node_modules | \
-		xargs shfmt -w -i 4
+		xargs -n 1 shfmt -w -i 4
 
 bashate:
 	@stank . | \
-		xargs bashate
+		xargs -n 1 bashate -i E006
 
 shellcheck:
 	@stank -exInterp zsh . | \
 		grep -v node_modules | \
-		xargs shellcheck
+		xargs -n 1 shellcheck
 
 funk:
 	@funk .
@@ -39,7 +39,7 @@ checkmake:
 			-iname '*.make' \
 		\) \
 		-print0 | \
-		xargs -0 -n 1 checkmake
+			xargs -0 -n 1 checkmake
 
 lint: shfmt bashate shellcheck funk yamllint checkmake
 
