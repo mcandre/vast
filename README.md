@@ -5,14 +5,10 @@
 ```console
 $ cd example
 
-$ cat vast.sh
-#!/bin/bash
-export vast_tasks='build itest'
-export vast_origin='build'
-
 $ vast -l
-build
-itest
+v-lint
+v-test
+v-build
 
 $ vast
 Running integration test suite.
@@ -24,7 +20,15 @@ See `vast -h` for more detail.
 
 ![Vishvakarma the all-architect](https://raw.githubusercontent.com/mcandre/vast/master/vast.jpg)
 
-vast is a build tool for shell script projects. vast is written in POSIX sh for portability, though you may use it with any POSIXy shell, including derivatives such as bash, zsh, and ksh. If you're familiar with `make` and `Makefile`, then you may enjoy `vast` and `vast.sh` files. By convention, individual tasks are defined as executables in `.vast.d/`
+vast is a build tool for shell script projects.
+
+vast is written in POSIX sh for portability, though you may use it with any POSIXy shell, including derivatives such as bash, zsh, and ksh.
+
+If you're familiar with `make` and `Makefile`, then you may enjoy `vast` and `vast.sh` files.
+
+By convention, individual tasks are defined as executable `v-<task name>` shell scripts in a per-project `.vast.d` directory.
+
+Compound tasks can invoke child tasks by simply running the command `v-<child task name>`.
 
 # INSTALL
 
@@ -33,7 +37,7 @@ vast is a build tool for shell script projects. vast is written in POSIX sh for 
 
 # RUNTIME REQUIREMENTS
 
-* a POSIX-compatible `sh`ell (e.g. `sh`, `bash`, `ksh`, `zsh`, etc.)
+* a UNIX environment with [coreutils](https://www.gnu.org/software/coreutils/) / [base](http://ftp.freebsd.org/pub/FreeBSD/releases/), [macOS](https://www.apple.com/macos), [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), etc.
 
 # CONTRIBUTING
 

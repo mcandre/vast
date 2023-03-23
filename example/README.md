@@ -22,16 +22,29 @@ Red
 
 # RUNTIME REQUIREMENTS
 
-* `tail` from [coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
+* a UNIX environment with [coreutils](https://www.gnu.org/software/coreutils/) / [base](http://ftp.freebsd.org/pub/FreeBSD/releases/), [macOS](https://www.apple.com/macos), [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), etc.
+* [zip](https://linux.die.net/man/1/zip)
 
 # BUILDTIME REQUIREMENTS
 
 * [vast](http://github.com/mcandre/vast)
 
-# BUILD
+# BUILD: LINT + TEST
 
 Keep the pipeline working!
 
 ```console
-$ vast
+$ vast [v-build]
+```
+
+# LINT
+
+```console
+$ vast v-lint
+```
+
+# TEST
+
+```console
+$ vast v-test
 ```

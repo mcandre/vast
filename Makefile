@@ -10,19 +10,24 @@ safety:
 audit: safety
 
 shfmt:
-	stank . | xargs shfmt -w -i 4
+	@stank -exInterp zsh . | \
+		grep -v node_modules | \
+		xargs shfmt -w -i 4
 
 bashate:
-	stank . | xargs bashate
+	@stank . | \
+		xargs bashate
 
 shellcheck:
-	stank -exInterp zsh . | grep -v node_modules | xargs shellcheck
+	@stank -exInterp zsh . | \
+		grep -v node_modules | \
+		xargs shellcheck
 
 funk:
-	funk .
+	@funk .
 
 yamllint:
-	yamllint .
+	@yamllint -s .yamllint .
 
 checkmake:
 	@find . \
@@ -39,13 +44,13 @@ checkmake:
 lint: shfmt bashate shellcheck funk yamllint checkmake
 
 test-version:
-	vast -v
+	@vast -v
 
 test-usage:
-	vast -h
+	@vast -h
 
 integration-test:
-	sh -c "cd example && vast -l && vast && vast build"
+	@sh -c "cd example && vast -l && vast && vast build"
 
 test: test-version test-usage integration-test
 

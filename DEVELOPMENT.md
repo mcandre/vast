@@ -1,6 +1,6 @@
 # BUILDTIME REQUIREMENTS
 
-* [coreutils](https://www.gnu.org/software/coreutils/)
+* a UNIX environment with [coreutils](https://www.gnu.org/software/coreutils/) / [base](http://ftp.freebsd.org/pub/FreeBSD/releases/), [macOS](https://www.apple.com/macos), [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), etc.
 * [ShellCheck](https://hackage.haskell.org/package/ShellCheck)
 * [GNU make](https://www.gnu.org/software/make/)
 * [GNU findutils](https://www.gnu.org/software/findutils/)
