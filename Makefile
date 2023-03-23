@@ -11,7 +11,6 @@ audit: safety
 
 shfmt:
 	@stank -exInterp zsh . | \
-		grep -v node_modules | \
 		xargs -n 1 shfmt -w -i 4
 
 bashate:
@@ -20,11 +19,14 @@ bashate:
 
 shellcheck:
 	@stank -exInterp zsh . | \
-		grep -v node_modules | \
 		xargs -n 1 shellcheck
 
 funk:
 	@funk .
+
+slick:
+	@stank -sh . | \
+		xargs -n 1 slick
 
 yamllint:
 	@yamllint -s .yamllint .
@@ -41,7 +43,7 @@ checkmake:
 		-print0 | \
 			xargs -0 -n 1 checkmake
 
-lint: shfmt bashate shellcheck funk yamllint checkmake
+lint: shfmt bashate shellcheck funk slick yamllint checkmake
 
 test-version:
 	@vast -v
