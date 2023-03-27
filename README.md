@@ -48,8 +48,8 @@ See [DEVELOPMENT.md](DEVELOPMENT.md).
 
 * Inspired by the excellent [mage](https://magefile.org/) build system for Go projects
 * [dale](https://github.com/mcandre/dale) offers similar task runner features for D projects
-* [GNU make](https://www.gnu.org/software/make/), a classic task runner
 * [cmake](https://cmake.org/) for C/C++ projects
+* [make](https://pubs.opengroup.org/onlinepubs/009695299/utilities/make.html), a classic task runner
 * [rez](https://github.com/mcandre/rez), a C/C++ task runner
 * [stank](https://github.com/mcandre/stank), a collection of POSIX-y shell script linters
 * [tinyrick](https://github.com/mcandre/tinyrick) for Rust projects
