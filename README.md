@@ -47,9 +47,20 @@ See [DEVELOPMENT.md](DEVELOPMENT.md).
 # SEE ALSO
 
 * Inspired by the excellent [mage](https://magefile.org/) build system for Go projects
+* [bashate](https://github.com/openstack/bashate), a shell script style linter
 * [dale](https://github.com/mcandre/dale) offers similar task runner features for D projects
 * [cmake](https://cmake.org/) for C/C++ projects
-* [make](https://pubs.opengroup.org/onlinepubs/009695299/utilities/make.html), a classic task runner
+* [GNU autotools](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html), a build system for Linux C/C++ projects
+* [GNU make](https://www.gnu.org/software/make/), a popular make implementation with GNU extensions
+* [Gradle](https://gradle.org/), a build system for JVM projects
+* [lake](https://luarocks.org/modules/steved/lake), a Lua task runner
+* [Mage](https://magefile.org/), a task runner for Go projects
+* [npm](https://www.npmjs.com/), [Grunt](https://gruntjs.com/), Node.js task runners
+* [POSIX make](https://pubs.opengroup.org/onlinepubs/009695299/utilities/make.html), a task runner standard for C/C++ and various other software projects
+* [Rake](https://ruby.github.io/rake/), a task runner for Ruby projects
 * [rez](https://github.com/mcandre/rez), a C/C++ task runner
+* [Shake](https://shakebuild.com/), a task runner for Haskell projects
+* [ShellCheck](https://www.shellcheck.net/), a shell script linter with a rich collection of rules for promoting safer scripting
+* [slick](https://github.com/mcandre/slick), a linter to enforce stricter, unextended POSIX sh syntax compliance
 * [stank](https://github.com/mcandre/stank), a collection of POSIX-y shell script linters
 * [tinyrick](https://github.com/mcandre/tinyrick) for Rust projects
