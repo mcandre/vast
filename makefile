@@ -28,22 +28,10 @@ slick:
 	@stank -sh . | \
 		xargs -n 1 slick
 
-yamllint:
-	@yamllint -s .yamllint .
+unmake:
+	@unmake makefile
 
-checkmake:
-	@find . \
-		-type f \
-		\( \
-			-iname Makefile -o \
-			-iname GNUmakefile -o \
-			-iname '*.mk' -o \
-			-iname '*.make' \
-		\) \
-		-print0 | \
-			xargs -0 -n 1 checkmake
-
-lint: shfmt bashate shellcheck funk slick yamllint checkmake
+lint: shfmt bashate shellcheck funk slick unmake
 
 test-version:
 	@vast -v
