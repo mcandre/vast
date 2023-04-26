@@ -30,6 +30,7 @@ slick:
 
 unmake:
 	@unmake makefile
+	@unmake install.mk
 
 lint: shfmt bashate shellcheck funk slick unmake
 

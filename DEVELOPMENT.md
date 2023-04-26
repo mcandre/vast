@@ -9,7 +9,7 @@
 * [Python](https://www.python.org/) 3.11.2+
 * [Rust](https://www.rust-lang.org/en-US/) 1.68.2+
 * a POSIX compliant [make](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html) implementation (e.g. GNU make, BSD make, etc.)
-* Provision additional dev tools with `./install`
+* Provision additional dev tools with `make -f install.mk`
 
 ## Recommended
 
