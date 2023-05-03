@@ -1,49 +1,47 @@
-.PHONY: all audit build lint test clean
+.POSIX:
+.SILENT:
+.PHONY: all audit build lint shfmt bashate shellcheck funk slick unmake test test-version test-usage integration-test
 
 all: build
 
 build: lint test
 
 safety:
-	@safety check
+	safety check
 
 audit: safety
 
 shfmt:
-	@stank -exInterp zsh . | \
+	stank -exInterp zsh . | \
 		xargs -n 1 shfmt -w -i 4
 
 bashate:
-	@stank . | \
+	stank . | \
 		xargs -n 1 bashate -i E006
 
 shellcheck:
-	@stank -exInterp zsh . | \
+	stank -exInterp zsh . | \
 		xargs -n 1 shellcheck
 
 funk:
-	@funk .
+	funk .
 
 slick:
-	@stank -sh . | \
+	stank -sh . | \
 		xargs -n 1 slick
 
 unmake:
-	@unmake makefile
-	@unmake install.mk
+	unmake .
 
 lint: shfmt bashate shellcheck funk slick unmake
 
 test-version:
-	@vast -v
+	vast -v
 
 test-usage:
-	@vast -h
+	vast -h
 
 integration-test:
-	@sh -c "cd example && vast -l && vast && vast build"
+	sh -c "cd example && vast -l && vast && vast build"
 
 test: test-version test-usage integration-test
-
-clean:
-	@echo "nothing to do"
