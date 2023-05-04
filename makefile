@@ -1,6 +1,19 @@
 .POSIX:
 .SILENT:
-.PHONY: all audit build lint shfmt bashate shellcheck funk slick unmake test test-version test-usage integration-test
+.PHONY: all \
+	audit \
+	build \
+	lint \
+	shfmt \
+	bashate \
+	shellcheck \
+	funk \
+	slick \
+	unmake \
+	test \
+	test-version \
+	test-usage \
+	test-integration
 
 all: build
 
@@ -41,7 +54,7 @@ test-version:
 test-usage:
 	vast -h
 
-integration-test:
+test-integration:
 	sh -c "cd example && vast -l && vast && vast build"
 
 test: test-version test-usage integration-test
