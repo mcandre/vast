@@ -1,5 +1,11 @@
 # vast: a build tool for shell scripts
 
+# DEPRECATED
+
+For sh purises, see [beltaloada](https://github.com/mcandre/beltaloada).
+
+For pragmatists, see [make](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html).
+
 # EXAMPLE
 
 ```console
